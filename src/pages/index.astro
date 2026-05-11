@@ -20,20 +20,18 @@ import '@/styles/global.css';
     <title>Елизавета Орлова | UI/UX Designer</title>
   </head>
 
-  <body class="bg-white text-[18px] text-black">
-    <main class="mx-auto flex min-h-screen flex-col overflow-hidden px-10 py-5">
-      <header class="flex justify-between font-medium">
+  <body class="bg-white text-[18px] font-medium text-black">
+    <main
+      class="mx-auto flex min-h-screen flex-col overflow-hidden px-10 pt-5 pb-10"
+    >
+      <header class="flex justify-between">
         <div class="w-1/2">[елизавета орлова]</div>
         <div class="flex w-1/2 justify-between">
           <nav class="flex gap-10">
-            <a
-              href="#projects"
-              class="hover:text-brand-blue underline-offset-4 transition-colors hover:underline"
+            <a href="#projects" class="hover:text-brand-blue transition-colors"
               >проекты</a
             >
-            <a
-              href="#resume"
-              class="hover:text-brand-blue underline-offset-4 transition-colors hover:underline"
+            <a href="#resume" class="hover:text-brand-blue transition-colors"
               >резюме</a
             >
           </nav>
@@ -50,7 +48,7 @@ import '@/styles/global.css';
 
       <section class="grid grid-cols-12">
         <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5 font-medium">[почта]</p>
+          <p class="text-brand-gray mb-2.5">[почта]</p>
           <a
             href="mailto:orlova.el.s@yandex.ru"
             class="hover:text-brand-blue transition-colors"
@@ -59,13 +57,13 @@ import '@/styles/global.css';
           </a>
         </div>
         <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5 font-medium">[телеграм]</p>
+          <p class="text-brand-gray mb-2.5">[телеграм]</p>
           <a href="#" class="hover:text-brand-blue transition-colors">
             @orl_lizard
           </a>
         </div>
         <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5 font-medium">[dprofile]</p>
+          <p class="text-brand-gray mb-2.5">[dprofile]</p>
           <a href="#" class="hover:text-brand-blue transition-colors">
             посмотреть
           </a>
@@ -82,7 +80,7 @@ import '@/styles/global.css';
             />
 
             <div class="flex flex-col justify-between pl-5">
-              <p class="text-[24px] font-bold">
+              <p class="lead text-[24px] leading-[1.2] font-bold">
                 делаю интерфейсы, которые легко согласовать с клиентом и удобно
                 использовать
               </p>
@@ -95,8 +93,7 @@ import '@/styles/global.css';
                 >
                   <PlayIcon class="h-6 w-6" />
                 </div>
-                <span
-                  class="group-hover:text-brand-blue text-[16px] font-medium"
+                <span class="group-hover:text-brand-blue text-[16px]"
                   >смотреть видео-визитку</span
                 >
               </button>
@@ -109,7 +106,7 @@ import '@/styles/global.css';
               href="#"
               class="bg-brand-blue group hover:bg-brand-deep-blue flex items-center gap-2.5 px-6 py-5 text-white transition-all"
             >
-              <span class="text-[16px] font-medium">написать в Telegram</span>
+              <span class="text-[16px]">написать в Telegram</span>
               <ArrowRightIcon
                 class="h-6 w-6 transition-transform group-hover:translate-x-1"
               />
