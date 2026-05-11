@@ -1,17 +1,124 @@
 ---
+import { Image } from 'astro:assets';
 
+import LogoTitle from '@/components/LogoTitle.astro';
+import PlayIcon from '@/components/icons/PlayIcon.astro';
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
+
+import elizabethPhoto from '@/assets/elizabeth.png';
+
+import '@/styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
-	</head>
-	<body>
-		<h1>Elizaveta Orlova</h1>
-	</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Елизавета Орлова | UI/UX Designer</title>
+  </head>
+
+  <body class="bg-white text-[18px] text-black">
+    <main
+      class="mx-auto flex min-h-screen max-w-480 flex-col overflow-hidden px-10 py-5"
+    >
+      <header class="flex justify-between font-medium">
+        <div class="w-1/2">[Елизавета Орлова]</div>
+        <div class="flex w-1/2 justify-between">
+          <nav class="flex gap-10">
+            <a
+              href="#projects"
+              class="hover:text-brand-blue underline-offset-4 transition-colors hover:underline"
+              >проекты</a
+            >
+            <a
+              href="#resume"
+              class="hover:text-brand-blue underline-offset-4 transition-colors hover:underline"
+              >резюме</a
+            >
+          </nav>
+          <div>[Junior+ UI/UX Designer]</div>
+        </div>
+      </header>
+
+      <section class="flex items-center pt-21 pb-8.75">
+        <div class="text-brand-blue w-full">
+          <LogoTitle class="h-auto w-full" />
+          <h1 class="sr-only">Елизавета Орлова</h1>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-12">
+        <div class="col-span-3">
+          <p class="text-brand-gray mb-2.5 font-bold">[почта]</p>
+          <a
+            href="mailto:orlova.el.s@yandex.ru"
+            class="hover:text-brand-blue transition-colors"
+          >
+            orlova.el.s@yandex.ru
+          </a>
+        </div>
+        <div class="col-span-3">
+          <p class="text-brand-gray mb-2.5 font-bold">[телеграм]</p>
+          <a href="#" class="hover:text-brand-blue transition-colors">
+            @orl_lizard
+          </a>
+        </div>
+        <div class="col-span-3">
+          <p class="text-brand-gray mb-2.5 font-bold">[dprofile]</p>
+          <a href="#" class="hover:text-brand-blue transition-colors">
+            посмотреть
+          </a>
+        </div>
+      </section>
+
+      <section class="mt-auto flex min-h-74.5 items-end">
+        <div class="w-1/2">
+          <div class="flex gap-2.5">
+            <Image
+              src={elizabethPhoto}
+              alt="Елизавета Орлова"
+              class="h-74.5 w-74.5 object-cover"
+            />
+
+            <div class="flex flex-col justify-between pl-5">
+              <p class="text-[24px] font-bold">
+                делаю интерфейсы, которые легко согласовать с клиентом и удобно
+                использовать
+              </p>
+
+              <button
+                class="group flex w-fit cursor-pointer items-center gap-4 transition-colors"
+              >
+                <div
+                  class="bg-brand-blue flex h-15 w-15 items-center justify-center rounded-full text-white"
+                >
+                  <PlayIcon class="h-6 w-6" />
+                </div>
+                <span
+                  class="group-hover:text-brand-blue text-[16px] font-medium"
+                  >смотреть видео-визитку</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto">
+          <div>
+            <a
+              href="#"
+              class="bg-brand-blue group hover:bg-brand-deep-blue flex items-center gap-2.5 px-6 py-5 text-white transition-all"
+            >
+              <span class="text-[16px] font-medium">написать в Telegram</span>
+              <ArrowRightIcon
+                class="h-6 w-6 transition-transform group-hover:translate-x-1"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
