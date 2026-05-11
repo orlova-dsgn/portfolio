@@ -5,7 +5,7 @@ import LogoTitle from '@/components/LogoTitle.astro';
 import PlayIcon from '@/components/icons/PlayIcon.astro';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
 
-import elizabethPhoto from '@/assets/elizabeth.png';
+import elizabethPhoto from '../assets/elizabeth.png';
 
 import '@/styles/global.css';
 ---
@@ -21,9 +21,7 @@ import '@/styles/global.css';
   </head>
 
   <body class="bg-white text-[18px] text-black">
-    <main
-      class="mx-auto flex min-h-screen max-w-480 flex-col overflow-hidden px-10 py-5"
-    >
+    <main class="mx-auto flex min-h-screen flex-col overflow-hidden px-10 py-5">
       <header class="flex justify-between font-medium">
         <div class="w-1/2">[Елизавета Орлова]</div>
         <div class="flex w-1/2 justify-between">
@@ -55,20 +53,26 @@ import '@/styles/global.css';
           <p class="text-brand-gray mb-2.5 font-bold">[почта]</p>
           <a
             href="mailto:orlova.el.s@yandex.ru"
-            class="hover:text-brand-blue transition-colors"
+            class="hover:text-brand-blue font-medium transition-colors"
           >
             orlova.el.s@yandex.ru
           </a>
         </div>
         <div class="col-span-3">
           <p class="text-brand-gray mb-2.5 font-bold">[телеграм]</p>
-          <a href="#" class="hover:text-brand-blue transition-colors">
+          <a
+            href="#"
+            class="hover:text-brand-blue font-medium transition-colors"
+          >
             @orl_lizard
           </a>
         </div>
         <div class="col-span-3">
           <p class="text-brand-gray mb-2.5 font-bold">[dprofile]</p>
-          <a href="#" class="hover:text-brand-blue transition-colors">
+          <a
+            href="#"
+            class="hover:text-brand-blue font-medium transition-colors"
+          >
             посмотреть
           </a>
         </div>
