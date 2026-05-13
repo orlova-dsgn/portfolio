@@ -7,8 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://orlova-dsgn.github.io',
-  base: '/portfolio',
+  site: 'https://elizavetaorlova.ru',
 
   integrations: [react()],
 
