@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  image1: ImageMetadata;
+  image2: ImageMetadata;
+}
+
+const { title, subtitle, description, image1, image2 } = Astro.props;
+---
+
+<section
+  class="border-brand-border2 hover:border-brand-blue cursor-pointer border bg-white p-4 transition-colors"
+>
+  <div class="flex gap-2.5">
+    <div class="bg-brand-gray2-bg flex w-1/2 items-center justify-center">
+      <Image src={image1} alt="Кейс" class="w-2/3 object-contain" />
+    </div>
+    <div class="w-1/2">
+      <Image src={image2} alt="Кейс" class="object-contain" />
+    </div>
+  </div>
+  <div class="mt-6 flex flex-col gap-2">
+    <div class="flex gap-3">
+      <h3 class="h3">{title}</h3>
+      <span class="h3 text-brand-gray2">•</span>
+      <h3 class="h3 text-brand-gray2">{subtitle}</h3>
+    </div>
+    <p class="text-default max-w-151.5 pb-3">{description}</p>
+  </div>
+</section>

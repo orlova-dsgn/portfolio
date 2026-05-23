@@ -1,7 +1,40 @@
 @import 'tailwindcss';
 
 @theme {
+  --color-brand-gray: #4c4c4c;
+  --color-brand-gray2: #94969f;
+  --color-brand-gray-bg: #fbfbfb;
+  --color-brand-gray2-bg: #e5e7f1;
   --color-brand-blue: #122da2;
-  --color-brand-deep-blue: #011468;
-  --color-brand-gray: #d0d2df;
+  --color-brand-border: #dedede;
+  --color-brand-border2: #e9ebf4;
+}
+
+@utility h1 {
+  @apply text-4xl leading-[120%] font-medium tracking-[-0.04em];
+}
+
+@utility h2 {
+  @apply text-[32px] leading-[120%] font-medium;
+}
+@utility h2-mobile {
+  @apply text-2xl leading-[120%] font-medium;
+}
+
+@utility h3 {
+  @apply text-2xl leading-[120%] font-semibold;
+}
+@utility h3-mobile {
+  @apply text-lg leading-[110%] font-bold;
+}
+
+@utility h4 {
+  @apply text-base leading-[140%] font-semibold;
+}
+
+@utility text-default {
+  @apply text-base leading-[140%] font-normal tracking-[-0.04em];
+}
+@utility text-secondary {
+  @apply text-base leading-[140%] font-medium;
 }

@@ -1,11 +1,6 @@
 ---
-import { Image } from 'astro:assets';
-
-import LogoTitle from '@/components/LogoTitle.astro';
-import PlayIcon from '@/components/icons/PlayIcon.astro';
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
-
-import elizabethPhoto from '@/assets/elizabeth.png';
+import Header from '@/components/Header.astro';
+import ProjectList from '@/components/ProjectList.astro';
 
 import '@/styles/global.css';
 ---
@@ -20,100 +15,17 @@ import '@/styles/global.css';
     <title>Елизавета Орлова | UI/UX Designer</title>
   </head>
 
-  <body class="bg-white text-[18px] font-medium text-black">
+  <body class="flex h-screen overflow-hidden bg-white text-black">
+    <Header />
     <main
-      class="mx-auto flex min-h-screen flex-col overflow-hidden px-10 pt-5 pb-10"
+      class="bg-brand-gray-bg flex-1 overflow-y-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat p-9"
     >
-      <header class="flex justify-between">
-        <div class="w-1/2">[елизавета орлова]</div>
-        <div class="flex w-1/2 justify-between">
-          <nav class="flex gap-10">
-            <a href="#projects" class="hover:text-brand-blue transition-colors"
-              >проекты</a
-            >
-            <a href="#resume" class="hover:text-brand-blue transition-colors"
-              >резюме</a
-            >
-          </nav>
-          <div>[Junior+ UI/UX Designer]</div>
+      <div class="mx-auto max-w-400">
+        <h2 class="h2">Проекты</h2>
+        <div class="pt-6">
+          <ProjectList />
         </div>
-      </header>
-
-      <section class="flex items-center pt-21 pb-8.75">
-        <div class="w-full text-red-800">
-          <LogoTitle class="h-auto w-full" />
-          <h1 class="sr-only">Елизавета Орлова</h1>
-        </div>
-      </section>
-
-      <section class="grid grid-cols-12">
-        <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5">[почта]</p>
-          <a
-            href="mailto:orlova.el.s@yandex.ru"
-            class="hover:text-brand-blue transition-colors"
-          >
-            orlova.el.s@yandex.ru
-          </a>
-        </div>
-        <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5">[телеграм]</p>
-          <a href="#" class="hover:text-brand-blue transition-colors">
-            @orl_lizard
-          </a>
-        </div>
-        <div class="col-span-3">
-          <p class="text-brand-gray mb-2.5">[dprofile]</p>
-          <a href="#" class="hover:text-brand-blue transition-colors">
-            посмотреть
-          </a>
-        </div>
-      </section>
-
-      <section class="mt-auto flex min-h-74.5 items-end">
-        <div class="max-w-216">
-          <div class="flex gap-2.5">
-            <Image
-              src={elizabethPhoto}
-              alt="Елизавета Орлова"
-              class="h-74.5 w-74.5 object-cover"
-            />
-
-            <div class="flex flex-col justify-between pl-5">
-              <p class="lead text-[24px] leading-[1.2] font-bold">
-                делаю интерфейсы, которые легко согласовать с клиентом и удобно
-                использовать
-              </p>
-
-              <button
-                class="group flex w-fit cursor-pointer items-center gap-4 transition-colors"
-              >
-                <div
-                  class="bg-brand-blue flex h-15 w-15 items-center justify-center rounded-full text-white"
-                >
-                  <PlayIcon class="h-6 w-6" />
-                </div>
-                <span class="group-hover:text-brand-blue text-[16px]"
-                  >смотреть видео-визитку</span
-                >
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="ml-auto">
-          <div>
-            <a
-              href="#"
-              class="bg-brand-blue group hover:bg-brand-deep-blue flex items-center gap-2.5 px-6 py-5 text-white transition-all"
-            >
-              <span class="text-[16px]">написать в Telegram</span>
-              <ArrowRightIcon
-                class="h-6 w-6 transition-transform group-hover:translate-x-1"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>

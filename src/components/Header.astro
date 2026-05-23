@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+
+import Link from '@/components/Link.astro';
+
+import elizabethPhoto from '@/assets/elizabeth.png';
+---
+
+<header
+  class="border-brand-border2 flex h-full w-100 max-w-100 flex-col justify-between overflow-hidden border-r p-9"
+>
+  <div>
+    <nav class="flex gap-3">
+      <Link text="проекты" />
+      <Link text="обо мне" />
+      <Link text="cv" />
+    </nav>
+    <div class="mt-32">
+      <Image
+        src={elizabethPhoto}
+        alt="Елизавета Орлова"
+        class="h-30 w-30 object-contain"
+      />
+      <div class="mt-6 flex flex-col gap-3">
+        <div class="flex gap-2">
+          <h4 class="h4">Елизавета Орлова</h4>
+          <h4 class="h4 text-brand-gray2">[Москва]</h4>
+        </div>
+        <h1 class="h1 text-brand-blue">UX/UI-дизайнер</h1>
+        <p class="text-default">
+          Успешно закрываю задачи, когда нужно взять на себя полный цикл
+          коммуникации со стейкхолдерами: от интервью до утверждения финальных
+          макетов.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <p class="text-default">Свяжитесь со мной</p>
+    <div class="flex gap-3">
+      <Link text="телеграм" />
+      <Link text="почта" />
+    </div>
+  </div>
+</header>
