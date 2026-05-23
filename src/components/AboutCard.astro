@@ -1,0 +1,42 @@
+---
+import { cn } from '@/lib/utils';
+
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
+
+interface Props {
+  title?: string;
+  years?: string;
+  tag?: string;
+  isExtraTag?: boolean;
+  list?: string[];
+}
+
+const { title, years, tag, isExtraTag = false, list } = Astro.props;
+---
+
+<section class="border-brand-border2 border bg-white p-6">
+  {
+    years && tag && (
+      <div class="text-secondary text-brand-gray2 mb-2 flex gap-3">
+        <p>{years}</p>
+        <p>•</p>
+        <p class={cn(isExtraTag && 'text-brand-blue')}>{tag}</p>
+      </div>
+    )
+  }
+  {title && <h3 class="h3 mb-3">{title}</h3>}
+  {
+    list && (
+      <ul class="flex flex-col gap-2">
+        {list.map((item) => (
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p>{item}</p>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</section>

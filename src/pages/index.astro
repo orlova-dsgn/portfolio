@@ -1,31 +1,14 @@
 ---
-import Header from '@/components/Header.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
 import ProjectList from '@/components/ProjectList.astro';
 
 import '@/styles/global.css';
 ---
 
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Елизавета Орлова | UI/UX Designer</title>
-  </head>
-
-  <body class="flex h-screen overflow-hidden bg-white text-black">
-    <Header />
-    <main
-      class="bg-brand-gray-bg flex-1 overflow-y-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat p-9"
-    >
-      <div class="mx-auto max-w-400">
-        <h2 class="h2">Проекты</h2>
-        <div class="pt-6">
-          <ProjectList />
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<BaseLayout>
+  <h2 class="h2">Проекты</h2>
+  <section class="pt-6">
+    <ProjectList />
+  </section>
+</BaseLayout>
