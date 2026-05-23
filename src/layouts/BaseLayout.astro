@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/Header.astro';
+import { MobileMenu } from '@/components/MobileMenu';
 ---
 
 <html lang="ru">
@@ -12,11 +13,16 @@ import Header from '@/components/Header.astro';
   </head>
 
   <body class="flex h-screen overflow-hidden bg-white text-black">
-    <Header />
+    <Header headerClassName="max-mobile:hidden" />
+
     <main
-      class="bg-brand-gray-bg flex-1 overflow-y-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat p-9 pb-32"
+      class="bg-brand-gray-bg max-mobile:p-4 flex-1 overflow-y-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat p-9 pb-32"
     >
       <div class="mx-auto max-w-300">
+        <div class="max-mobile:block hidden">
+          <MobileMenu client:load />
+        </div>
+
         <slot />
       </div>
     </main>

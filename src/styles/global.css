@@ -8,6 +8,14 @@
   --color-brand-blue: #122da2;
   --color-brand-border: #dedede;
   --color-brand-border2: #e9ebf4;
+
+  --breakpoint-mobile: 960px;
+}
+
+@layer components {
+  .btn-brand {
+    @apply text-default text-brand-gray border-brand-border hover:text-brand-blue hover:border-brand-blue cursor-pointer border bg-white px-5 pt-1.75 pb-2 text-center transition-colors;
+  }
 }
 
 @utility h1 {
@@ -15,14 +23,14 @@
 }
 
 @utility h2 {
-  @apply text-[32px] leading-[120%] font-medium;
+  @apply max-mobile:h2-mobile text-[32px] leading-[120%] font-medium;
 }
 @utility h2-mobile {
   @apply text-2xl leading-[120%] font-medium;
 }
 
 @utility h3 {
-  @apply text-2xl leading-[120%] font-semibold;
+  @apply max-mobile:h3-mobile text-2xl leading-[120%] font-semibold;
 }
 @utility h3-mobile {
   @apply text-lg leading-[110%] font-bold;

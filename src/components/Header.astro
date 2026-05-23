@@ -1,19 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 
-import Link from '@/components/Link.astro';
+import { cn } from '@/lib/utils';
+
+import Button from '@/components/Button.astro';
 
 import elizabethPhoto from '@/assets/elizabeth.png';
+
+interface Props {
+  headerClassName: string;
+}
+
+const { headerClassName } = Astro.props;
 ---
 
 <header
-  class="border-brand-border2 flex h-full w-100 max-w-100 flex-col justify-between overflow-hidden border-r p-9"
+  class={cn(
+    'border-brand-border2 flex h-full w-100 max-w-100 flex-col justify-between overflow-hidden border-r p-9',
+    headerClassName
+  )}
 >
   <div>
     <nav class="flex gap-3">
-      <Link text="проекты" href="/" />
-      <Link text="обо мне" href="/about" />
-      <Link text="cv" />
+      <Button href="/">проекты</Button>
+      <Button href="/about">обо мне</Button>
+      <Button>cv</Button>
     </nav>
     <div class="mt-32">
       <Image
@@ -39,8 +50,8 @@ import elizabethPhoto from '@/assets/elizabeth.png';
   <div class="flex flex-col gap-2">
     <p class="text-default">Свяжитесь со мной</p>
     <div class="flex gap-3">
-      <Link text="телеграм" />
-      <Link text="почта" />
+      <Button>телеграм</Button>
+      <Button>почта</Button>
     </div>
   </div>
 </header>
