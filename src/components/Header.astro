@@ -3,8 +3,6 @@ import { Image } from 'astro:assets';
 
 import { cn } from '@/lib/utils';
 
-import Button from '@/components/Button.astro';
-
 import elizabethPhoto from '@/assets/elizabeth.png';
 
 interface Props {
@@ -22,9 +20,9 @@ const { headerClassName } = Astro.props;
 >
   <div>
     <nav class="flex gap-3">
-      <Button href="/">проекты</Button>
-      <Button href="/about">обо мне</Button>
-      <Button>cv</Button>
+      <a class="btn-brand" href="/">проекты</a>
+      <a class="btn-brand" href="/about">обо мне</a>
+      <button class="btn-brand">cv</button>
     </nav>
     <div class="mt-32">
       <Image
@@ -50,8 +48,8 @@ const { headerClassName } = Astro.props;
   <div class="flex flex-col gap-2">
     <p class="text-default">Свяжитесь со мной</p>
     <div class="flex gap-3">
-      <Button>телеграм</Button>
-      <Button>почта</Button>
+      <button class="btn-brand">телеграм</button>
+      <button class="btn-brand">почта</button>
     </div>
   </div>
 </header>

@@ -20,9 +20,8 @@ import { MobileMenu } from '@/components/MobileMenu';
     >
       <div class="mx-auto max-w-300">
         <div class="max-mobile:block hidden">
-          <MobileMenu client:load />
+          <MobileMenu client:media="(max-width: 960px)" />
         </div>
-
         <slot />
       </div>
     </main>
