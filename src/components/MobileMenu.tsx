@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 
-export const MobileMenu = () => {
+interface MobileMenuProps {
+  children: ReactNode;
+}
+
+export const MobileMenu = ({ children }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleIsOpen = () => {
@@ -67,13 +71,7 @@ export const MobileMenu = () => {
             </button>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <p className="text-default">Свяжитесь со мной</p>
-            <div className="flex gap-3">
-              <button className="btn-brand">телеграм</button>
-              <button className="btn-brand">почта</button>
-            </div>
-          </div>
+          <div className="flex flex-col gap-2">{children}</div>
         </div>
       )}
     </div>

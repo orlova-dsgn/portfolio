@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/Header.astro';
+import ContactMe from '@/components/ContactMe.astro';
 import { MobileMenu } from '@/components/MobileMenu';
 ---
 
@@ -16,7 +17,9 @@ import { MobileMenu } from '@/components/MobileMenu';
     class={"flex h-screen overflow-hidden text-black max-mobile:overflow-auto max-mobile:block max-mobile:h-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat bg-brand-gray-bg"}
   >
     <div class="max-mobile:block fixed top-4 right-4 hidden">
-      <MobileMenu client:media="(max-width: 960px)" />
+      <MobileMenu client:media="(max-width: 960px)">
+        <ContactMe />
+      </MobileMenu>
     </div>
 
     <Header />

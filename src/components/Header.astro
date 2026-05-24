@@ -2,16 +2,16 @@
 import { Image } from 'astro:assets';
 
 import { cn } from '@/lib/utils';
-
 import elizabethPhoto from '@/assets/elizabeth.png';
 
-const pathname = Astro.url.pathname;
-const isAboutPage = pathname === '/about';
+import ContactMe from './ContactMe.astro';
+
+const isAboutPage = Astro.url.pathname.includes('/about');
 ---
 
 <header
   class={cn(
-    'border-brand-border2 flex h-full max-w-100 flex-col justify-between overflow-hidden border-r p-9 max-mobile:pb-22 bg-white max-mobile:max-w-none max-mobile:border-0 max-mobile:overflow-auto',
+    'border-brand-border2 flex h-full max-w-100 flex-col justify-between overflow-hidden border-r p-9 max-mobile:pb-22 bg-white max-mobile:max-w-none max-mobile:border-r-0 max-mobile:border-b max-mobile:overflow-auto',
     isAboutPage && 'max-mobile:hidden'
   )}
 >
@@ -33,7 +33,7 @@ const isAboutPage = pathname === '/about';
           <h4 class="h4 text-brand-gray2">[Москва]</h4>
         </div>
         <h1 class="h1 text-brand-blue">UX/UI-дизайнер</h1>
-        <p class="text-default">
+        <p class="text-default max-w-82">
           Успешно закрываю задачи, когда нужно взять на себя полный цикл
           коммуникации со стейкхолдерами: от интервью до утверждения финальных
           макетов.
@@ -43,10 +43,6 @@ const isAboutPage = pathname === '/about';
   </div>
 
   <div class="max-mobile:hidden flex flex-col gap-2">
-    <p class="text-default">Свяжитесь со мной</p>
-    <div class="flex gap-3">
-      <button class="btn-brand">телеграм</button>
-      <button class="btn-brand">почта</button>
-    </div>
+    <ContactMe />
   </div>
 </header>
