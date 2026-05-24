@@ -5,26 +5,23 @@ import { cn } from '@/lib/utils';
 
 import elizabethPhoto from '@/assets/elizabeth.png';
 
-interface Props {
-  headerClassName: string;
-}
-
-const { headerClassName } = Astro.props;
+const pathname = Astro.url.pathname;
+const isAboutPage = pathname === '/about';
 ---
 
 <header
   class={cn(
-    'border-brand-border2 flex h-full w-100 max-w-100 flex-col justify-between overflow-hidden border-r p-9',
-    headerClassName
+    'border-brand-border2 flex h-full max-w-100 flex-col justify-between overflow-hidden border-r p-9 max-mobile:pb-22 bg-white max-mobile:max-w-none max-mobile:border-0 max-mobile:overflow-auto',
+    isAboutPage && 'max-mobile:hidden'
   )}
 >
   <div>
-    <nav class="flex gap-3">
+    <nav class="max-mobile:hidden flex gap-3">
       <a class="btn-brand" href="/">проекты</a>
       <a class="btn-brand" href="/about">обо мне</a>
       <button class="btn-brand">cv</button>
     </nav>
-    <div class="mt-32">
+    <div class="max-mobile:mt-13 mt-32">
       <Image
         src={elizabethPhoto}
         alt="Елизавета Орлова"
@@ -45,7 +42,7 @@ const { headerClassName } = Astro.props;
     </div>
   </div>
 
-  <div class="flex flex-col gap-2">
+  <div class="max-mobile:hidden flex flex-col gap-2">
     <p class="text-default">Свяжитесь со мной</p>
     <div class="flex gap-3">
       <button class="btn-brand">телеграм</button>

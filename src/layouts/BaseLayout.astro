@@ -12,16 +12,17 @@ import { MobileMenu } from '@/components/MobileMenu';
     <title>Елизавета Орлова | UI/UX Designer</title>
   </head>
 
-  <body class="flex h-screen overflow-hidden bg-white text-black">
-    <Header headerClassName="max-mobile:hidden" />
+  <body
+    class={"flex h-screen overflow-hidden text-black max-mobile:overflow-auto max-mobile:block max-mobile:h-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat bg-brand-gray-bg"}
+  >
+    <div class="max-mobile:block fixed top-4 right-4 hidden">
+      <MobileMenu client:media="(max-width: 960px)" />
+    </div>
 
-    <main
-      class="bg-brand-gray-bg max-mobile:p-4 flex-1 overflow-y-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat p-9 pb-32!"
-    >
+    <Header />
+
+    <main class="max-mobile:px-4 flex-1 overflow-y-auto px-9 pt-9 pb-32">
       <div class="mx-auto max-w-300">
-        <div class="max-mobile:block hidden">
-          <MobileMenu client:media="(max-width: 960px)" />
-        </div>
         <slot />
       </div>
     </main>

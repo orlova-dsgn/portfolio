@@ -17,7 +17,7 @@ const { title, years, tag, isExtraTag = false, list } = Astro.props;
 <section class="border-brand-border2 border bg-white p-6">
   {
     years && tag && (
-      <div class="text-secondary text-brand-gray2 mb-2 flex gap-3">
+      <div class="text-secondary text-brand-gray2 max-mobile:gap-1 mb-2 flex gap-3">
         <p>{years}</p>
         <p>•</p>
         <p class={cn(isExtraTag && 'text-brand-blue')}>{tag}</p>
