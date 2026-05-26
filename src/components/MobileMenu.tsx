@@ -66,15 +66,20 @@ export const MobileMenu = ({ children }: MobileMenuProps) => {
           <div />
 
           <div className="flex flex-col gap-6">
-            <a className="btn-brand" href="/" onClick={toggleIsOpen}>
+            <a className="btn-brand" href="/">
               проекты
             </a>
-            <a className="btn-brand" href="/about" onClick={toggleIsOpen}>
+            <a className="btn-brand" href="/about">
               обо мне
             </a>
-            <button className="btn-brand" onClick={toggleIsOpen}>
+            <a
+              className="btn-brand"
+              href="/Resume_OrlovaES_UXUI-designer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               cv
-            </button>
+            </a>
           </div>
 
           <div className="flex flex-col gap-2">{children}</div>

@@ -19,7 +19,12 @@ const isAboutPage = Astro.url.pathname.includes('/about');
     <nav class="max-mobile:hidden flex gap-3">
       <a class="btn-brand" href="/">проекты</a>
       <a class="btn-brand" href="/about">обо мне</a>
-      <button class="btn-brand">cv</button>
+      <a
+        class="btn-brand"
+        href="/Resume_OrlovaES_UXUI-designer.pdf"
+        target="_blank"
+        rel="noopener noreferrer">cv</a
+      >
     </nav>
     <div class="max-mobile:mt-13 mt-32">
       <Image
