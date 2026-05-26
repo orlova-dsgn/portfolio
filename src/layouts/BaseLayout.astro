@@ -2,6 +2,7 @@
 import Header from '@/components/Header.astro';
 import ContactMe from '@/components/ContactMe.astro';
 import { MobileMenu } from '@/components/MobileMenu';
+import NavigationLinks from '@/components/NavigationLinks.astro';
 ---
 
 <html lang="ru" class="scrollbar-gutter-stable">
@@ -19,7 +20,15 @@ import { MobileMenu } from '@/components/MobileMenu';
   >
     <div class="max-mobile:block hidden">
       <MobileMenu client:media="(max-width: 960px)">
-        <ContactMe />
+        <div class="fixed inset-0 flex flex-col justify-between bg-white p-4">
+          <div></div>
+          <nav class="flex flex-col gap-6">
+            <NavigationLinks />
+          </nav>
+          <div class="flex flex-col gap-2">
+            <ContactMe />
+          </div>
+        </div>
       </MobileMenu>
     </div>
 

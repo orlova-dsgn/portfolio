@@ -61,30 +61,7 @@ export const MobileMenu = ({ children }: MobileMenuProps) => {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 flex flex-col justify-between bg-white p-4">
-          <div />
-
-          <div className="flex flex-col gap-6">
-            <a className="btn-brand" href="/">
-              проекты
-            </a>
-            <a className="btn-brand" href="/about">
-              обо мне
-            </a>
-            <a
-              className="btn-brand"
-              href="/Resume_OrlovaES_UXUI-designer.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              cv
-            </a>
-          </div>
-
-          <div className="flex flex-col gap-2">{children}</div>
-        </div>
-      )}
+      {isOpen && <>{children}</>}
     </>
   );
 };
