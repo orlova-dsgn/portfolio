@@ -13,7 +13,7 @@ const { className, items, type = 'default', extraClassName } = Astro.props;
 
 <div
   class={cn(
-    'border-brand-border2 border p-6 flex flex-col gap-3',
+    'border-brand-border2 border p-6 flex flex-col gap-3 bg-white',
     type === 'good' &&
       'text-brand-green bg-brand-green-bg border-brand-green-border',
     type === 'bad' && '',
