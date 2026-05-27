@@ -3,11 +3,17 @@
 @theme {
   --color-brand-gray: #4c4c4c;
   --color-brand-gray2: #94969f;
+  --color-brand-green: #20502e;
+
   --color-brand-gray-bg: #fbfbfb;
   --color-brand-gray2-bg: #e5e7f1;
+  --color-brand-green-bg: #ddf1e3;
+
   --color-brand-blue: #122da2;
+
   --color-brand-border: #dedede;
   --color-brand-border2: #e9ebf4;
+  --color-brand-green-border: #91caa2;
 
   --breakpoint-mobile: 960px;
 }
@@ -18,25 +24,19 @@
   }
 }
 
-@utility h1 {
+h1 {
   @apply text-4xl leading-[120%] font-medium tracking-[-0.04em];
 }
 
-@utility h2 {
-  @apply max-mobile:h2-mobile text-[32px] leading-[120%] font-medium;
-}
-@utility h2-mobile {
-  @apply text-2xl leading-[120%] font-medium;
+h2 {
+  @apply max-mobile:text-2xl max-mobile:leading-[120%] max-mobile:font-medium text-[32px] leading-[120%] font-medium;
 }
 
-@utility h3 {
-  @apply max-mobile:h3-mobile text-2xl leading-[120%] font-semibold;
-}
-@utility h3-mobile {
-  @apply text-lg leading-[110%] font-bold;
+h3 {
+  @apply max-mobile:text-lg max-mobile:leading-[110%] max-mobile:font-bold text-2xl leading-[120%] font-semibold;
 }
 
-@utility h4 {
+h4 {
   @apply text-base leading-[140%] font-semibold;
 }
 

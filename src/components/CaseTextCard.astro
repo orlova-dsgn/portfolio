@@ -1,0 +1,37 @@
+---
+import { cn } from '@/lib/utils';
+
+interface Props {
+  className: string;
+  items: { title: string; list?: string[] }[];
+  type?: 'default' | 'good' | 'bad';
+  extraClassName?: string;
+}
+
+const { className, items, type = 'default', extraClassName } = Astro.props;
+---
+
+<div
+  class={cn(
+    'border-brand-border2 border p-6 flex flex-col gap-3',
+    type === 'good' &&
+      'text-brand-green bg-brand-green-bg border-brand-green-border',
+    type === 'bad' && '',
+    className
+  )}
+>
+  {
+    items.map((item) => (
+      <div>
+        <h4 class="mb-2">{item.title}</h4>
+        {item.list && (
+          <div class={cn('flex flex-col gap-1', extraClassName)}>
+            {item.list.map((li) => (
+              <p class="text-default">{li}</p>
+            ))}
+          </div>
+        )}
+      </div>
+    ))
+  }
+</div>

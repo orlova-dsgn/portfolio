@@ -8,12 +8,14 @@ import ContactMe from './ContactMe.astro';
 import NavigationLinks from './NavigationLinks.astro';
 
 const isAboutPage = Astro.url.pathname.includes('/about');
+const isCasePage = Astro.url.pathname.includes('/case-');
 ---
 
 <header
   class={cn(
     'border-brand-border2 flex h-full max-w-100 flex-col justify-between overflow-hidden border-r p-9  max-mobile:px-4 max-mobile:pb-22 bg-white max-mobile:max-w-none max-mobile:border-r-0 max-mobile:border-b max-mobile:overflow-auto',
-    isAboutPage && 'max-mobile:hidden'
+    isAboutPage && 'max-mobile:hidden',
+    isCasePage && 'hidden'
   )}
 >
   <div>
@@ -31,10 +33,10 @@ const isAboutPage = Astro.url.pathname.includes('/about');
       />
       <div class="mt-6 flex flex-col gap-3">
         <div class="flex gap-2">
-          <h4 class="h4">Елизавета Орлова</h4>
-          <h4 class="h4 text-brand-gray2">[Москва]</h4>
+          <h4>Елизавета Орлова</h4>
+          <h4 class="text-brand-gray2">[Москва]</h4>
         </div>
-        <h1 class="h1 text-brand-blue">UX/UI-дизайнер</h1>
+        <h1 class="text-brand-blue">UX/UI-дизайнер</h1>
         <p class="text-default max-w-82">
           Успешно закрываю задачи, когда нужно взять на себя полный цикл
           коммуникации со стейкхолдерами: от интервью до утверждения финальных

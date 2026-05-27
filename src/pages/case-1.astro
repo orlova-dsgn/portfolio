@@ -1,0 +1,588 @@
+---
+import { Image } from 'astro:assets';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import CaseTextCard from '@/components/CaseTextCard.astro';
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
+import ContactMe from '@/components/ContactMe.astro';
+
+import img_1 from '@/assets/case-1/img_1.png';
+import img_2 from '@/assets/case-1/img_2.png';
+import img_3 from '@/assets/case-1/img_3.png';
+import img_4 from '@/assets/case-1/img_4.png';
+import img_5 from '@/assets/case-1/img_5.jpg';
+import img_6 from '@/assets/case-1/img_6.png';
+import img_7 from '@/assets/case-1/img_7.png';
+import img_8 from '@/assets/case-1/img_8.png';
+import img_9 from '@/assets/case-1/img_9.png';
+import img_10 from '@/assets/case-1/img_10.png';
+import img_11 from '@/assets/case-1/img_11.png';
+import img_12 from '@/assets/case-1/img_12.png';
+import img_13 from '@/assets/case-1/img_13.png';
+import img_14 from '@/assets/case-1/img_14.png';
+import img_15 from '@/assets/case-1/img_15.png';
+
+import elizabethPhoto from '@/assets/elizabeth.png';
+---
+
+<BaseLayout>
+  <section class="max-mobile:pt-9 pt-32">
+    <div class="mx-auto max-w-184">
+      <a class="btn-brand" href="/">к проектам</a>
+
+      <div class="max-mobile:my-6 my-12">
+        <h1 class="mb-1">Институт ревматологии</h1>
+        <a
+          class="text-default hover:text-brand-blue cursor-pointer transition-colors"
+        >
+          rheumatolog.su ↗
+        </a>
+      </div>
+
+      <h4>
+        Государственное учреждение, объединяющее несколько направлений: науку,
+        клинику и образование. Необходимо соблюсти требования из приказа
+        по наполнению сайта относительно постановлений МЗ РФ и Минобрнауки
+        о наполнении сайта организации информационным контентом.
+      </h4>
+    </div>
+
+    <Image
+      src={img_1}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <div class="max-mobile:flex-col flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Моя роль',
+              list: [
+                'UX/UI-дизайнер (переработка структуры, разработка дизайна с учётом масштабирования, согласование со стейкхолдерами)',
+              ],
+            },
+            {
+              title: 'Период',
+              list: ['2024–2025'],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Команда',
+              list: [
+                'Frontend-разработчик',
+                'Backend-разработчик',
+                'Медицинские эксперты',
+                'Руководитель проекта',
+                'UX/UI-дизайнер',
+              ],
+            },
+          ]}
+        />
+      </div>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">
+        Проблемы и результаты
+      </h3>
+
+      <div class="max-mobile:flex-col max-mobile:mb-2 mb-6 flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Информационная свалка',
+              list: [
+                'Новые разделы добавлялись в меню без поддержки структуры. Образовалась чрезмерно глубокая иерархия, где в одном меню соседствуют страницы из разных областей.',
+              ],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Провела сегментацию аудитории, выделила 3 чётких направления — наука, клиника, образование — и распределила страницы по ролям пользователей — пациенты, специалисты, абитуриенты.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+
+      <div class="max-mobile:flex-col max-mobile:mb-2 mb-6 flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Нарушение правил типографики',
+              list: [
+                '«Простыни» текста без подзаголовков, мелкий шрифт, отсутствие контраста.',
+              ],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Тексты структурированы, выделены подзаголовками для быстрого сканирования текста пользователями.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+
+      <div class="max-mobile:flex-col flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Отсутствие мобильной версии',
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Продумано поведение элементов и созданы адаптивные макеты под 4 разрешения экрана.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+    </div>
+
+    <Image
+      src={img_2}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <Image
+      src={img_3}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Цель</h3>
+      <p class="text-default">
+        Сократить путь пользователя до получения необходимых инструкций по
+        записи на прием, упростить поиск нужного специалиста.
+      </p>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">Бенчмаркинг</h3>
+      <p class="text-default mb-2">
+        Был проведён анализ сайтов других организаций, в которых сочетаются
+        процессы медицины, образования и науки с целью выявления лучших
+        практических решений, чтобы учесть их при разработке вайрфрейма.
+      </p>
+      <p class="text-default">
+        Приведен анализ структуры блоков главных страниц.
+      </p>
+
+      <Image
+        src={img_4}
+        alt="Кейс"
+        class="max-mobile:mb-2 mt-2 mb-6 w-full object-contain"
+      />
+
+      <CaseTextCard
+        className="w-full"
+        items={[
+          {
+            title: 'Выводы',
+            list: [
+              'Добавить блок с цифрами на главный экран, т.к. исследования показывают, что такой блок укрепляет доверие пользователей.',
+              'Блок со схемой проезда также решено вынести на главную страницу, т.к. приоритетно организация ведёт очные приёмы.',
+            ],
+          },
+        ]}
+        type="good"
+        extraClassName="gap-2"
+      />
+    </div>
+
+    <Image src={img_5} alt="Кейс" class="my-12 w-full object-contain" />
+
+    <div class="max-mobile:mb-6 mb-12 flex gap-2.5">
+      <Image src={img_6} alt="Кейс" class="w-1/2 object-contain" />
+      <Image src={img_7} alt="Кейс" class="w-1/2 object-contain" />
+    </div>
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Структура</h3>
+      <p class="text-default mb-2">
+        Ниже представлена часть структуры, на которой перечислены типы страниц
+        будущего сайта. Фиолетовым выделены страницы, которым нужен будет макет.
+        Остальные страницы заполняются через CMS с помощью шаблонных стилей,
+        которые разработаны специально с учетом наличия CMS.
+      </p>
+      <p class="text-default">
+        Реорганизация структуры сайта может плохо сказаться на SEO. Поэтому у
+        многих страниц остались прежние URL-ссылки, сохранено большинство
+        заголовков и мета-теги.
+      </p>
+    </div>
+
+    <Image
+      src={img_8}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">
+        Оптимизация сценария поиска врача: от бесконечного скролла к целевому
+        действию
+      </h3>
+
+      <h4 class="mb-1">Проблемы:</h4>
+      <ul class="flex flex-col gap-1">
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <h4>
+            Есть поиск только по фамилии, (если пользователь знает врача,
+            то найдёт), в сумме с отсутствием на карточке врача указания
+            специальности, выбрать специалиста без дополнительных знаний —
+            проблематично.
+          </h4>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <h4>
+            Большие карточки — 2 на экран. Это приводило к бесконечному скроллу.
+          </h4>
+        </li>
+      </ul>
+    </div>
+
+    <Image
+      src={img_9}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <div class="max-mobile:flex-col max-mobile:mb-2 mb-6 flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Гипотеза 1',
+              list: [
+                'Если мы будем искать не только по имени, то пациент найдёт нужного врача быстрее',
+              ],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Проведён бенчмаркинг, по результатам которого добавлены фильтры поиска по специальности врача и направлению лечения.',
+              ],
+            },
+            {
+              title: 'Результат',
+              list: [
+                'Увеличилось количество заявок в личном кабинете с выбором конкретного специалиста на 30%.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+
+      <div class="max-mobile:flex-col max-mobile:mb-2 mb-6 flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Гипотеза 2',
+              list: [
+                'Если на экране будет размещено больше врачей одновременно, то эффективность просмотра для пользователя увеличится.',
+              ],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Переделать сетку на четырёх колоночную и сделать карточку компактной.',
+              ],
+            },
+            {
+              title: 'Результат',
+              list: [
+                'Проведён A/B тест, в котором 7 из 10 пользователей отметили, что просматривать врачей в сетке на четыре колонки быстрее и удобнее, чем в 1 колонке.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+
+      <div class="max-mobile:flex-col max-mobile:mb-2 mb-6 flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Гипотеза 3',
+              list: [
+                'Если мы будем выводить рейтинг и специализацию врача сразу на его карточке, то снизится нагрузка на контактный центр.',
+              ],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Решение',
+              list: [
+                'Переделана карточка врача, на неё сразу выведена дополнительная информация.',
+              ],
+            },
+            {
+              title: 'Результат',
+              list: [
+                'Гипотеза подтвердилась  — мы увидели снижение числа обращений в контактный-центр по уточнению специализации врача.',
+              ],
+            },
+          ]}
+          type="good"
+        />
+      </div>
+
+      <h4 class="my-2">Решения от которых пришлось отказаться:</h4>
+      <p class="text-default">
+        Одной из идей был сценарий, при котором пациенту было бы доступно
+        расписание врача и выбор времени (тут же в карточке врача).
+        Но разработчики сказали, что реализовать функционал из личного кабинета
+        на страницах сайта в существующие сроки не представляется возможным.
+      </p>
+    </div>
+
+    <Image
+      src={img_10}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Дизайн-система</h3>
+      <p class="text-default">
+        Дизайн построен на принципах атомарного подхода и системы компонентов.
+        Это позволяет сократить время разработки.
+      </p>
+      <Image src={img_11} alt="Кейс" class="mt-2 mb-5 w-full object-contain" />
+      <p class="text-default">
+        Например, карточка врача используется как на странице, где перечислены
+        все врачи, так и на странице с подробным описанием врача и на странице
+        подразделений (чтобы показать заведующего и сотрудников подразделения).
+      </p>
+      <Image
+        src={img_12}
+        alt="Кейс"
+        class="max-mobile:mb-6 mt-2 mb-12 w-full object-contain"
+      />
+
+      <h3 class="max-mobile:mb-2 mb-6">Реорганизация хедера</h3>
+      <div class="flex flex-col gap-2">
+        <h4>Приоритизация целевых действий</h4>
+        <ul class="flex flex-col gap-1">
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p class="text-default">
+              Ссылки «Как записаться» и «Личные кабинеты» терялись в общем
+              массиве текста.
+            </p>
+          </li>
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p class="text-default">
+              Пункт «Версия для слабовидящих» вынесен в правый верхний угол
+              и снабжён иконкой очков. В старой версии это была просто текстовая
+              ссылка, которую сложно заметить. Теперь она соответствует
+              стандартам доступности госучреждений и медицинских организаций.
+            </p>
+          </li>
+        </ul>
+
+        <h4>Уменьшение количества ссылок в меню:</h4>
+        <ul class="flex flex-col gap-1">
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p class="text-default">помогает избежать паралича выбора</p>
+          </li>
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p class="text-default">
+              является следствием чёткого разделения аудитории сайта
+              на категории
+            </p>
+          </li>
+          <li class="flex gap-2">
+            <p class="pt-1.5">
+              <ArrowRightIcon class="text-brand-blue" />
+            </p>
+            <p class="text-default">готовит хедер к адаптивной вёрстке</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <Image
+      src={img_13}
+      alt="Кейс"
+      class="max-mobile:mb-6 mt-9 mb-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Создание графики</h3>
+      <p class="text-default mb-2">
+        Для этого проекта были подобраны фотографии, предоставленные заказчиком,
+        сделана ретушь, сделана цветокоррекция.
+      </p>
+      <p class="text-default">
+        Растровая графика создана с помощью нейросети Recraft и доработаны в
+        Photoshop. Векторная графика также была создана в Recraft.
+      </p>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">
+        Мобильная версия
+      </h3>
+      <p class="text-default mb-2">
+        Структура страниц продумана так, чтобы ее можно было легко адаптировать.
+        Макеты всех страниц были сделаны для брейкпоинтов 1920px, 1024 px, 768
+        px и 360 px.
+      </p>
+
+      <Image src={img_14} alt="Кейс" class="mt-5 w-full object-contain" />
+    </div>
+
+    <Image
+      src={img_15}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Обсуждение с разработчиками</h3>
+      <p class="text-default mb-2">
+        Провела дизайн-ревью с разработчиками до передачи макетов — уточнили,
+        какие части макетов динамические, а какие статичные.
+      </p>
+      <p class="text-default">
+        Также в макетах учтены состояния, когда контент выходит за пределы поля:
+        длинные заголовки страниц, ФИО, названия карточек. Все состояния
+        элементов также есть в макетах.
+      </p>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">Результаты</h3>
+
+      <ul class="flex flex-col gap-2">
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            Реорганизована структура сайта, благодаря чему навигация стала
+            понятнее.
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            Разработана масштабируемая дизайн-система и 
+            <span class="font-semibold">адаптивные макеты (160+ экранов)</span>
+            для всех ключевых устройств, что упростило дальнейшее развитие проекта.
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            <span class="font-semibold">
+              Оптимизирован сценарий поиска врача:
+            </span> после внедрения новых фильтров количество заявок с выбором конкретного
+            специалиста выросло на 43%.
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            Улучшена читаемость и доступность:
+            <span class="font-semibold">
+              переработаны типографика, меню сайта.
+            </span>
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            После введения сайта сверстала более 100 страниц дополнительно,
+            используя разработанные компоненты.
+          </p>
+        </li>
+      </ul>
+
+      <div
+        class="max-mobile:mt-6 max-mobile:p-2 mt-12 flex flex-col items-center gap-2 bg-white p-6"
+      >
+        <Image
+          src={elizabethPhoto}
+          alt="Елизавета Орлова"
+          class="h-30 w-30 rounded-full object-contain"
+          width={200}
+          height={200}
+        />
+        <h4 class="text-brand-blue my-2 max-w-71 text-center">
+          Буду рада обсудить проект подробнее на собеседовании!
+        </h4>
+        <ContactMe />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

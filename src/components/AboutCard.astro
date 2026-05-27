@@ -24,7 +24,7 @@ const { title, years, tag, isExtraTag = false, list } = Astro.props;
       </div>
     )
   }
-  {title && <h3 class={cn('h3', list && 'mb-3')}>{title}</h3>}
+  {title && <h3 class={cn(list && 'mb-3')}>{title}</h3>}
   {
     list && (
       <ul class="flex flex-col gap-2">

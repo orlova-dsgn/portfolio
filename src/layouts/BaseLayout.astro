@@ -1,8 +1,13 @@
 ---
 import Header from '@/components/Header.astro';
 import ContactMe from '@/components/ContactMe.astro';
-import { MobileMenu } from '@/components/MobileMenu';
 import NavigationLinks from '@/components/NavigationLinks.astro';
+import { MobileMenu } from '@/components/MobileMenu';
+
+import '@/styles/global.css';
+import { cn } from '@/lib/utils';
+
+const isCasePage = Astro.url.pathname.includes('/case-');
 ---
 
 <html lang="ru" class="scrollbar-gutter-stable">
@@ -16,7 +21,11 @@ import NavigationLinks from '@/components/NavigationLinks.astro';
   </head>
 
   <body
-    class={"flex h-screen overflow-hidden text-black max-mobile:overflow-auto max-mobile:block max-mobile:h-auto bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat bg-brand-gray-bg"}
+    class={cn(
+      'flex h-screen overflow-hidden text-black max-mobile:overflow-auto max-mobile:block max-mobile:h-auto bg-brand-gray-bg',
+      !isCasePage &&
+        "bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat"
+    )}
   >
     <div class="max-mobile:block hidden">
       <MobileMenu client:media="(max-width: 960px)">
@@ -35,9 +44,7 @@ import NavigationLinks from '@/components/NavigationLinks.astro';
     <Header />
 
     <main class="max-mobile:px-4 flex-1 overflow-y-auto px-9 pt-9 pb-32">
-      <div class="mx-auto max-w-300">
-        <slot />
-      </div>
+      <slot />
     </main>
   </body>
 </html>

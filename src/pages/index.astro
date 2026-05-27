@@ -2,13 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 import ProjectList from '@/components/ProjectList.astro';
-
-import '@/styles/global.css';
 ---
 
 <BaseLayout>
-  <h2 class="h2">Проекты</h2>
-  <section class="pt-6">
-    <ProjectList />
-  </section>
+  <div class="mx-auto max-w-300">
+    <h2>Проекты</h2>
+    <section class="pt-6">
+      <ProjectList />
+    </section>
+  </div>
 </BaseLayout>
