@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@import '@fontsource/inter';
+
 @theme {
   --color-brand-gray: #4c4c4c;
   --color-brand-gray2: #94969f;
@@ -22,6 +24,10 @@
   .btn-brand {
     @apply text-default text-brand-gray border-brand-border hover:text-brand-blue hover:border-brand-blue cursor-pointer border bg-white px-5 pt-1.75 pb-2 text-center transition-colors;
   }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
 
 h1 {
