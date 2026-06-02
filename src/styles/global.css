@@ -1,8 +1,11 @@
 @import 'tailwindcss';
 
-@import '@fontsource/inter';
-
 @theme {
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  /* /Fonts */
+
+  /* Colors */
   --color-brand-gray: #4c4c4c;
   --color-brand-gray2: #94969f;
   --color-brand-green: #20502e;
@@ -16,8 +19,11 @@
   --color-brand-border: #dedede;
   --color-brand-border2: #e9ebf4;
   --color-brand-green-border: #91caa2;
+  /* /Colors */
 
+  /* Breakpoints */
   --breakpoint-mobile: 960px;
+  /* /Breakpoints */
 }
 
 @layer components {
@@ -26,20 +32,16 @@
   }
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-}
-
 h1 {
   @apply text-4xl leading-[120%] font-medium tracking-[-0.04em];
 }
 
 h2 {
-  @apply max-mobile:text-2xl max-mobile:leading-[120%] max-mobile:font-medium text-[32px] leading-[120%] font-medium;
+  @apply max-mobile:text-2xl max-mobile:leading-[120%] text-[32px] leading-[120%] font-medium;
 }
 
 h3 {
-  @apply max-mobile:text-lg max-mobile:leading-[110%] max-mobile:font-bold text-2xl leading-[120%] font-semibold;
+  @apply max-mobile:text-lg max-mobile:leading-[110%] text-2xl leading-[120%] font-semibold;
 }
 
 h4 {
