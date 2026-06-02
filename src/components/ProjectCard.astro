@@ -21,23 +21,11 @@ const { title, subtitle, description, image1, image2, href } = Astro.props;
       <div
         class="bg-brand-gray2-bg max-mobile:w-full flex aspect-video w-1/2 items-center justify-center"
       >
-        <Image
-          src={image1}
-          alt="Кейс"
-          class="w-2/3 object-contain"
-          width={640}
-          height={360}
-        />
+        <Image src={image1} alt="Кейс" class="w-2/3 object-contain" />
       </div>
 
       <div class="max-mobile:w-full bg-brand-gray2-bg aspect-video w-1/2">
-        <Image
-          src={image2}
-          alt="Кейс"
-          class="w-full object-contain"
-          width={640}
-          height={360}
-        />
+        <Image src={image2} alt="Кейс" class="w-full object-contain" />
       </div>
     </div>
     <div class="mt-6 flex flex-col gap-2">
