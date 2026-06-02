@@ -1,4 +1,6 @@
 ---
+import { Font } from 'astro:assets';
+
 import Header from '@/components/Header.astro';
 import ContactMe from '@/components/ContactMe.astro';
 import NavigationLinks from '@/components/NavigationLinks.astro';
@@ -15,6 +17,7 @@ const isProd = import.meta.env.PROD;
 
 <html lang="ru" class="scrollbar-gutter-stable">
   <head>
+    <Font cssVariable="--font-inter" preload />
     <meta charset="utf-8" />
     {isProd && <YandexMetrika />}
     <link rel="icon" href="/favicon.ico" sizes="any" />

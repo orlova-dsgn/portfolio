@@ -1,0 +1,343 @@
+---
+import { Image } from 'astro:assets';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import CaseTextCard from '@/components/CaseTextCard.astro';
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
+import CaseFooter from '@/components/CaseFooter.astro';
+
+import img_0 from '@/assets/case-2/img_0.png';
+import img_1 from '@/assets/case-2/img_1.jpg';
+import img_2 from '@/assets/case-2/img_2.png';
+import img_3 from '@/assets/case-2/img_3.png';
+import img_4 from '@/assets/case-2/img_4.png';
+import img_5 from '@/assets/case-2/img_5.png';
+import img_6 from '@/assets/case-2/img_6.png';
+import img_7 from '@/assets/case-2/img_7.png';
+import img_8 from '@/assets/case-2/img_8.png';
+import img_9 from '@/assets/case-2/img_9.png';
+import img_10 from '@/assets/case-2/img_10.png';
+import img_11 from '@/assets/case-2/img_11.png';
+import img_12 from '@/assets/case-2/img_12.png';
+---
+
+<BaseLayout>
+  <section class="max-mobile:pt-9 pt-32">
+    <div class="mx-auto max-w-184">
+      <a class="btn-brand" href="/">к проектам</a>
+
+      <div class="max-mobile:my-6 my-12">
+        <h1 class="mb-1">Inrik-Vist (Интернет-магазин с ЛК)</h1>
+        <a
+          class="text-default hover:text-brand-blue cursor-pointer transition-colors"
+          href="https://www.figma.com/proto/j2Mm9VUrOBgFdAmhZnurO8/Inrik-Vist-DESIGN-v1--Copy-?content-scaling=fixed&kind=proto&node-id=53-120&page-id=1%3A2&scaling=scale-down-width&starting-point-node-id=53%3A120"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          прототип в figma ↗
+        </a>
+      </div>
+
+      <h4>
+        Inrik-Vist — это компания, создающая премиальные зерновые смеси
+        для птиц. Также они ведут сотрудничество с заповедниками России,
+        что позволяет заботиться о сохранении птичьего мира.
+      </h4>
+    </div>
+
+    <Image
+      src={img_0}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <div class="max-mobile:flex-col flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Моя роль',
+              list: ['Веб-дизайнер'],
+            },
+            {
+              title: 'Период',
+              list: ['12 недель'],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Задача',
+              list: [
+                'Сделать бренд узнаваемым',
+                'Передать ценности: забота, бережное отношение к природе, экологичность',
+                'Создать атмосферу доброжелательности и уюта, чтобы посетитель чувствовал себя причастным к сохранению птичьего мира',
+                'Создать дизайн, который позволит масштабироваться (в планах добавление новых категорий)',
+              ],
+            },
+          ]}
+        />
+      </div>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">
+        Анализ конкурентов
+      </h3>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-default">
+          Мультибрендовые магазины, которые имели большое количество разных
+          категорий. Такие сайты я брала только для анализа карточки товара,
+          фильтров.
+        </p>
+        <p class="text-default">
+          Далее я проанализировала сайты зарубежных брендов для животных. Такие
+          сайты хорошо презентуют бренд, тут обычно меньше товаров, часто
+          отсутствует функция покупки.
+        </p>
+        <p class="text-default">
+          Также я анализировала интернет-магазины крупных брендов из других ниш,
+          чтобы выявить лучшие решения.
+        </p>
+      </div>
+
+      <Image
+        src={img_1}
+        alt="Кейс"
+        class="max-mobile:mt-3 mt-6 w-full object-contain"
+      />
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Структура</h3>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-default">
+          Помимо каталога товаров в структуру были добавлены страницы
+          «Где купить» и «Вакансии». Это позволяет пользователям быстро найти
+          точки продаж продукции и ознакомиться с актуальными вакансиями
+          компании.
+        </p>
+        <p class="text-default">
+          На картинке структура сайта без Личного кабинета.
+        </p>
+      </div>
+    </div>
+
+    <Image
+      src={img_2}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Дизайн концепция</h3>
+      <p class="text-default">
+        Брендовый цвет компании ярко-красный. Мне хотелось подчеркнуть связь
+        с природой, вынести на первый план сотрудничество с заповедниками,
+        поэтому вторым основным цветом был выбран насыщенный зелёный.
+      </p>
+    </div>
+
+    <Image
+      src={img_3}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+    <Image
+      src={img_4}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Дизайн</h3>
+      <p class="text-default">
+        Визуальная концепция сайта строится вокруг идеи заботы о домашних
+        животных и эмоциональной связи между питомцами и их владельцами.
+        В логотипе компании используется силуэт птицы, я решила использовать
+        этот элемент в дизайне, чтобы усилить визуальную целостность и сделать
+        бренд более узнаваемым.
+      </p>
+    </div>
+
+    <Image
+      src={img_5}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="max-mobile:my-6 my-12 flex gap-2.5">
+      <Image src={img_6} alt="Кейс" class="w-1/2 object-contain" />
+      <Image src={img_7} alt="Кейс" class="w-1/2 object-contain" />
+    </div>
+
+    <Image
+      src={img_8}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+    <Image
+      src={img_9}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Меню</h3>
+
+      <div class="max-mobile:mb-2 mb-6 flex flex-col gap-6">
+        <p class="text-default">
+          Для каталога была разработана структура с подразделами и вложенными
+          категориями, которая позволяет пользователям быстро находить нужные
+          товары. Также была продумана логичная группировка категорий для
+          удобной навигации.
+        </p>
+        <p class="text-default">
+          Поиск спроектирован таким образом, чтобы ускорить процесс выбора
+          товаров: пользователям предлагаются подсказки с популярными
+          категориями и разделами, что помогает быстрее перейти к нужному
+          ассортименту.
+        </p>
+      </div>
+
+      <div style="position: relative; padding-top: 56.25%; width: 100%">
+        <iframe
+          src="https://kinescope.io/embed/q9mVpq7eu7PHK6bEi6f7Vc"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+          frameborder="0"
+          allowfullscreen
+          style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">UI-kit</h3>
+      <p class="text-default">
+        Особенность UI-kit — кастомные иконки для категорий животных, не все они
+        использованы в проекте на данном этапе, но предоставлены разработчикам,
+        на случай дальнейшего расширения бизнеса.
+      </p>
+    </div>
+
+    <Image
+      src={img_10}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Состояния</h3>
+
+      <div class="flex flex-col gap-6">
+        <p class="text-default">
+          Помимо основных экранов, для ключевых разделов были проработаны
+          дополнительные состояния интерфейса, с которыми пользователь
+          обязательно столкнется в реальной работе.
+        </p>
+        <p class="text-default">
+          Например, для страницы «Избранное» были подготовлены не только макеты
+          с добавленными товарами, но и сценарии, которые пользователь может
+          встретить в реальном использовании сервиса: пустое избранное
+          и состояние для неавторизованного пользователя.
+        </p>
+      </div>
+    </div>
+
+    <Image
+      src={img_11}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Личный кабинет</h3>
+      <p class="text-default max-mobile:mb-2 mb-6">
+        Разработана система экранов личного кабинета, охватывающая полный цикл
+        взаимодействия пользователя с сервисом: регистрацию и авторизацию,
+        управление персональными данными, просмотр истории заказов, работу
+        с избранным, сохранёнными адресами и настройками профиля.
+      </p>
+
+      <div style="position: relative; padding-top: 56.25%; width: 100%">
+        <iframe
+          src="https://kinescope.io/embed/dwNjKNzgAti7cXxLf73E7v"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+          frameborder="0"
+          allowfullscreen
+          style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
+        ></iframe>
+      </div>
+
+      <h3 class="max-mobile:mb-2 max-mobile:mt-6 mt-12 mb-6">
+        Адаптивные макеты
+      </h3>
+      <p class="text-default">
+        Для каждого экрана были разработана дополнительно по 5 адаптивных
+        макета. Чтобы это сделать быстрее, я использовала автолейауты, привязки
+        и плагины для наведения порядка в слоях.
+      </p>
+    </div>
+
+    <Image
+      src={img_12}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Прототип</h3>
+      <p class="text-default mb-2">
+        Детализированный кликабельный прототип, включающий в себя не только
+        переходы по страницам, но и настройку состояний элементов помог быстро
+        и с наименьшим количеством правок утвердить макеты.
+      </p>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">Результаты</h3>
+
+      <ul class="flex flex-col gap-2">
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            <span class="font-semibold">
+              Разработала логику авторизации, личного кабинета и пограничные
+              состояния интерфейса.
+            </span>
+            Например, доступ к «Избранному» только для зарегистрированных пользователей,
+            состояния ошибки ввода, отсутствие отзывов у товара.
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            <span class="font-semibold">Оптимизировала корзину.</span>
+            Создала компактную корзину, есть возможность управлять заказом «на лету»
+            без лишних переходов по страницам, (снижая процент брошенных корзин).
+          </p>
+        </li>
+        <li class="flex gap-2">
+          <p class="pt-1.5">
+            <ArrowRightIcon class="text-brand-blue" />
+          </p>
+          <p class="text-default">
+            <span class="font-semibold">
+              Подготовила pixel-perfect адаптив.
+            </span>
+            Проработала логику перестроения десктопной сетки в удобный мобильный UI
+            под управление одной рукой, минимизировав вопросы от фронтенд-разработчиков.
+          </p>
+        </li>
+      </ul>
+
+      <CaseFooter />
+    </div>
+  </section>
+</BaseLayout>

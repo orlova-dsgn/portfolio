@@ -5,7 +5,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 import CaseTextCard from '@/components/CaseTextCard.astro';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.astro';
-import ContactMe from '@/components/ContactMe.astro';
+import CaseFooter from '@/components/CaseFooter.astro';
 
 import img_1 from '@/assets/case-1/img_1.png';
 import img_2 from '@/assets/case-1/img_2.png';
@@ -22,8 +22,6 @@ import img_12 from '@/assets/case-1/img_12.png';
 import img_13 from '@/assets/case-1/img_13.png';
 import img_14 from '@/assets/case-1/img_14.png';
 import img_15 from '@/assets/case-1/img_15.png';
-
-import elizabethPhoto from '@/assets/elizabeth.png';
 ---
 
 <BaseLayout>
@@ -222,7 +220,11 @@ import elizabethPhoto from '@/assets/elizabeth.png';
       />
     </div>
 
-    <Image src={img_5} alt="Кейс" class="my-12 w-full object-contain" />
+    <Image
+      src={img_5}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
 
     <div class="max-mobile:mb-6 mb-12 flex gap-2.5">
       <Image src={img_6} alt="Кейс" class="w-1/2 object-contain" />
@@ -571,21 +573,7 @@ import elizabethPhoto from '@/assets/elizabeth.png';
         </li>
       </ul>
 
-      <div
-        class="max-mobile:mt-6 max-mobile:p-2 border-brand-border2 mt-12 flex flex-col items-center gap-2 border bg-white p-6"
-      >
-        <Image
-          src={elizabethPhoto}
-          alt="Елизавета Орлова"
-          class="h-30 w-30 rounded-full object-contain"
-          width={200}
-          height={200}
-        />
-        <h4 class="text-brand-blue my-2 max-w-71 text-center">
-          Буду рада обсудить проект подробнее на собеседовании!
-        </h4>
-        <ContactMe />
-      </div>
+      <CaseFooter />
     </div>
   </section>
 </BaseLayout>

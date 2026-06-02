@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+
+import ContactMe from './ContactMe.astro';
+
+import elizabethPhoto from '@/assets/elizabeth.png';
+---
+
+<div
+  class="max-mobile:mt-6 max-mobile:p-2 border-brand-border2 mt-12 flex flex-col items-center gap-2 border bg-white p-6"
+>
+  <Image
+    src={elizabethPhoto}
+    alt="Елизавета Орлова"
+    class="h-30 w-30 rounded-full object-contain"
+    width={200}
+    height={200}
+  />
+  <h4 class="text-brand-blue my-2 max-w-71 text-center">
+    Буду рада обсудить проект подробнее на собеседовании!
+  </h4>
+  <ContactMe />
+</div>
