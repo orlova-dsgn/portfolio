@@ -11,7 +11,13 @@ import { PROJECT_LIST } from '@/constants';
     <h2>Проекты</h2>
     <section class="pt-6">
       <section class="flex flex-col gap-6">
-        {PROJECT_LIST.map((project) => <ProjectCard project={project} />)}
+        {
+          PROJECT_LIST.map((project) => (
+            <div class="flex">
+              <ProjectCard project={project} />
+            </div>
+          ))
+        }
       </section>
     </section>
   </div>

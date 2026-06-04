@@ -4,6 +4,6 @@ export interface Project {
   subtitle: string;
   description: string;
   image1: ImageMetadata;
-  image2: ImageMetadata;
-  lottieAnimationSrc: string;
+  cardWidth: string;
+  imgWidth: string;
 }

@@ -3,33 +3,29 @@ import { Image } from 'astro:assets';
 
 import type { Project } from '@/types';
 
-import { LottieAnimation } from '../components/LottieAnimation.jsx';
-
 interface Props {
   project: Project;
 }
 
 const { project } = Astro.props;
 
-const { id, title, subtitle, description, image1, image2, lottieAnimationSrc } =
+const { id, title, subtitle, description, image1, cardWidth, imgWidth } =
   project;
 ---
 
-<a href={id} id={id}>
+<a href={id} id={id} style=`width: ${cardWidth}`>
   <div
     class="border-brand-border2 hover:border-brand-blue cursor-pointer border bg-white p-4 transition-colors"
   >
-    <div class="max-mobile:flex-col flex gap-2.5">
-      <div
-        class="bg-brand-gray2-bg max-mobile:w-full flex aspect-video w-1/2 items-center justify-center"
-      >
-        <Image src={image1} alt="Кейс" class="w-2/3 object-contain" />
-      </div>
-
-      <div class="max-mobile:w-full bg-brand-gray2-bg aspect-video w-1/2">
-        <LottieAnimation client:load src={lottieAnimationSrc} id={id} />
-      </div>
+    <div class="bg-brand-gray2-bg flex aspect-video items-end justify-center">
+      <Image
+        src={image1}
+        alt="Кейс"
+        class="object-contain"
+        style=`width: ${imgWidth}`
+      />
     </div>
+
     <div class="mt-6 flex flex-col gap-2">
       <div class="max-mobile:flex-col-reverse flex gap-3">
         <h3>{title}</h3>
@@ -38,7 +34,7 @@ const { id, title, subtitle, description, image1, image2, lottieAnimationSrc } =
           <span>{subtitle}</span>
         </h3>
       </div>
-      <p class="text-default max-w-151.5 pb-3">{description}</p>
+      <p class="text-default pb-3">{description}</p>
     </div>
   </div>
 </a>
