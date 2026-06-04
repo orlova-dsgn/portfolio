@@ -9,19 +9,34 @@ interface Props {
 
 const { project } = Astro.props;
 
-const { id, title, subtitle, description, image1, cardWidth, imgWidth } =
-  project;
+const {
+  id,
+  title,
+  subtitle,
+  description,
+  image1,
+  imgWidth,
+  gradientColorFrom,
+  gradientColorTo,
+} = project;
 ---
 
-<a href={id} id={id} style=`width: ${cardWidth}`>
+<a href={id} id={id} class="group block">
   <div
-    class="border-brand-border2 hover:border-brand-blue cursor-pointer border bg-white p-4 transition-colors"
+    class="border-brand-border2 h-full cursor-pointer border bg-white p-4 transition-colors duration-300"
   >
-    <div class="bg-brand-gray2-bg flex aspect-video items-end justify-center">
+    <div
+      class="bg-brand-gray2-bg relative flex aspect-video items-end justify-center overflow-hidden"
+    >
+      <div
+        class="mobile:group-hover:opacity-100 absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out"
+        style=`background-image: linear-gradient(to top, ${gradientColorFrom}, ${gradientColorTo});`
+      >
+      </div>
       <Image
         src={image1}
         alt="Кейс"
-        class="object-contain"
+        class="mobile:group-hover:scale-110 z-10 object-contain transition-transform duration-300 ease-in-out"
         style=`width: ${imgWidth}`
       />
     </div>

@@ -4,6 +4,7 @@ export interface Project {
   subtitle: string;
   description: string;
   image1: ImageMetadata;
-  cardWidth: string;
   imgWidth: string;
+  gradientColorFrom: string;
+  gradientColorTo: string;
 }
