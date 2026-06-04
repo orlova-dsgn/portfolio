@@ -1,0 +1,191 @@
+---
+import { Image } from 'astro:assets';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import CaseTextCard from '@/components/CaseTextCard.astro';
+import CaseFooter from '@/components/CaseFooter.astro';
+
+import img_1 from '@/assets/case-3/img_1.png';
+import img_2 from '@/assets/case-3/img_2.png';
+import img_3 from '@/assets/case-3/img_3.png';
+import img_4 from '@/assets/case-3/img_4.png';
+import img_5 from '@/assets/case-3/img_5.png';
+import img_6 from '@/assets/case-3/img_6.png';
+import img_7 from '@/assets/case-3/img_7.png';
+import img_8 from '@/assets/case-3/img_8.png';
+---
+
+<BaseLayout>
+  <section class="max-mobile:pt-9 pt-32">
+    <div class="mx-auto max-w-184">
+      <a class="btn-brand" href="/">к проектам</a>
+
+      <div class="max-mobile:my-6 my-12">
+        <h1 class="mb-1">Линквэй</h1>
+        <a
+          class="text-default hover:text-brand-blue cursor-pointer transition-colors"
+          href="https://linkway.by/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkway.by↗
+        </a>
+      </div>
+
+      <h4>
+        Корпоративный сайт для дистрибьютора информационных технологий,
+        выстроенный как удобная B2B-платформа для взаимодействия с вендорами
+        и партнёрами
+      </h4>
+    </div>
+
+    <Image
+      src={img_1}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <div class="max-mobile:flex-col flex gap-2">
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Моя роль',
+              list: ['Веб-дизайнер'],
+            },
+            {
+              title: 'Период',
+              list: ['2 недели'],
+            },
+          ]}
+        />
+        <CaseTextCard
+          className="max-mobile:w-full w-1/2"
+          items={[
+            {
+              title: 'Задача',
+              list: [
+                'Создать дизайн страниц сайта',
+                'Создать форму для партнёров',
+              ],
+            },
+          ]}
+        />
+      </div>
+
+      <h3 class="max-mobile:mt-6 max-mobile:mb-2 mt-12 mb-6">Структура</h3>
+
+      <div class="max-mobile:gap-2 flex flex-col gap-6">
+        <p class="text-default">
+          Помимо каталога товаров в структуру были добавлены страницы
+          «Где купить» и «Вакансии». Это позволяет пользователям быстро найти
+          точки продаж продукции и ознакомиться с актуальными вакансиями
+          компании.
+        </p>
+        <p class="text-default">
+          На картинке структура сайта без Личного кабинета.
+        </p>
+      </div>
+
+      <Image
+        src={img_2}
+        alt="Кейс"
+        class="max-mobile:mt-2 mt-6 w-full object-contain"
+      />
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Дизайн</h3>
+
+      <div class="max-mobile:gap-2 flex flex-col gap-6">
+        <p class="text-default">
+          Важно было сохранить брендовые цвета компании. Добавлен принт
+          в различные элементы, в стиле логотипа Linkway, это решение создаёт
+          уникальный узнаваемый стиль компании и помогает стилистически
+          объединить все страницы сайта.
+        </p>
+      </div>
+    </div>
+
+    <Image
+      src={img_3}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="max-mobile:my-6 max-mobile:flex-col flex gap-2.5">
+      <Image
+        src={img_4}
+        alt="Кейс"
+        class="max-mobile:w-full w-1/2 object-contain"
+      />
+      <iframe
+        class="max-mobile:aspect-square w-full"
+        src="https://kinescope.io/embed/e8pFYtUDCzraKxkY1dk3J1"
+        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+        frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+
+    <Image
+      src={img_5}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+    <Image
+      src={img_6}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">UI-kit</h3>
+      <Image src={img_7} alt="Кейс" class="w-full object-contain" />
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Анимация</h3>
+      <p class="text-default">
+        Для дополнения концепции на первом экране иллюстрация анимирована
+        с помощью lottiefile.
+      </p>
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Адаптивные макеты</h3>
+      <p class="text-default">
+        Для каждого экрана были разработана дополнительно по 4 адаптивных
+        макета. Чтобы это сделать быстрее, я использовала автолейауты, привязки
+        и плагины для наведения порядка в слоях.
+      </p>
+    </div>
+
+    <div class="max-mobile:mt-6 mx-auto mt-12 max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Стили</h3>
+      <p class="text-default">
+        Оптимизировать свою работу мне помогают стили, я добавляю текстовые
+        стили, цвета, использующиеся в проекте, разбиваю их на смысловые группы,
+        чтобы быстро внести правки, если они будут.
+      </p>
+    </div>
+
+    <Image
+      src={img_8}
+      alt="Кейс"
+      class="max-mobile:my-6 my-12 w-full object-contain"
+    />
+
+    <div class="mx-auto max-w-184">
+      <h3 class="max-mobile:mb-2 mb-6">Прототип</h3>
+      <p class="text-default mb-2">
+        Детализированный кликабельный прототип, включающий в себя не только
+        переходы по страницам, но и настройку состояний элементов помог быстро
+        и с наименьшим количеством правок утвердить макеты.
+      </p>
+
+      <CaseFooter />
+    </div>
+  </section>
+</BaseLayout>
