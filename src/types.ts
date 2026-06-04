@@ -7,4 +7,5 @@ export interface Project {
   imgWidth: string;
   gradientColorFrom: string;
   gradientColorTo: string;
+  isLocked?: boolean;
 }

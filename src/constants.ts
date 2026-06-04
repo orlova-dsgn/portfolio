@@ -53,6 +53,7 @@ export const PROJECT_LIST: Project[][] = [
       imgWidth: '75%',
       gradientColorFrom: '#DAFFB9',
       gradientColorTo: '#7141EF',
+      isLocked: true,
     },
   ],
 ];
