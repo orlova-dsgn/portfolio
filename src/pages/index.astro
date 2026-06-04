@@ -1,14 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-import ProjectList from '@/components/ProjectList.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+import { PROJECT_LIST } from '@/constants';
 ---
 
 <BaseLayout>
   <div class="mx-auto max-w-300">
     <h2>Проекты</h2>
     <section class="pt-6">
-      <ProjectList />
+      <section class="flex flex-col gap-6">
+        {PROJECT_LIST.map((project) => <ProjectCard project={project} />)}
+      </section>
     </section>
   </div>
 </BaseLayout>

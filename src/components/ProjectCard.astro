@@ -1,19 +1,21 @@
 ---
 import { Image } from 'astro:assets';
 
+import type { Project } from '@/types';
+
+import { LottieAnimation } from '../components/LottieAnimation.jsx';
+
 interface Props {
-  title: string;
-  subtitle: string;
-  description: string;
-  image1: ImageMetadata;
-  image2: ImageMetadata;
-  href: string;
+  project: Project;
 }
 
-const { title, subtitle, description, image1, image2, href } = Astro.props;
+const { project } = Astro.props;
+
+const { id, title, subtitle, description, image1, image2, lottieAnimationSrc } =
+  project;
 ---
 
-<a href={href}>
+<a href={id} id={id}>
   <div
     class="border-brand-border2 hover:border-brand-blue cursor-pointer border bg-white p-4 transition-colors"
   >
@@ -25,7 +27,7 @@ const { title, subtitle, description, image1, image2, href } = Astro.props;
       </div>
 
       <div class="max-mobile:w-full bg-brand-gray2-bg aspect-video w-1/2">
-        <Image src={image2} alt="Кейс" class="w-full object-contain" />
+        <LottieAnimation client:load src={lottieAnimationSrc} id={id} />
       </div>
     </div>
     <div class="mt-6 flex flex-col gap-2">
