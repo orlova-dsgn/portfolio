@@ -2,6 +2,7 @@ import imgNiir from '@/assets/projects/img_niir.png';
 import imgInrik from '@/assets/projects/img_Inrik-vist.png';
 import imgLinkway from '@/assets/projects/img_linkway.png';
 import imgKeramika from '@/assets/projects/img_keramika.png';
+import imgLk from '@/assets/projects/img_lk.png';
 
 import type { Project } from './types';
 
@@ -17,6 +18,20 @@ export const PROJECT_LIST: Project[][] = [
       imgWidth: '75%',
       gradientColorFrom: '#103469',
       gradientColorTo: '#1F67CF',
+    },
+  ],
+  [
+    {
+      id: 'case-5',
+      title: 'Личный кабинет пациента',
+      subtitle: 'исследование',
+      description:
+        'Исследование пути пользователя до получения услуги Интерпретация снимка МРТ и КТ',
+      image1: imgLk,
+      imgWidth: '80%',
+      gradientColorFrom: '#103469',
+      gradientColorTo: '#1F67CF',
+      imgPlaceClassName: 'justify-start',
     },
   ],
   [
@@ -53,7 +68,8 @@ export const PROJECT_LIST: Project[][] = [
       imgWidth: '75%',
       gradientColorFrom: '#DAFFB9',
       gradientColorTo: '#7141EF',
-      isLocked: true,
+      externalLink:
+        'https://www.figma.com/design/inxOqn8ot5yoiGK5WVSoau/20_%D0%98%D0%9C_Liza-Orlova_Prototype?node-id=0-1&t=AU6cC7K2r46E3pUR-1',
     },
   ],
 ];
