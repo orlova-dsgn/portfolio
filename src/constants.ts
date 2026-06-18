@@ -24,14 +24,13 @@ export const PROJECT_LIST: Project[][] = [
     {
       id: 'case-5',
       title: 'Личный кабинет пациента',
-      subtitle: 'исследование',
+      subtitle: 'продуктовый редизайн',
       description:
-        'Исследование пути пользователя до получения услуги Интерпретация снимка МРТ и КТ',
+        'Улучшение главной страницы и сценария получения дистанционной услуги Описание и интерпретация снимка МРТ и КТ',
       image1: imgLk,
-      imgWidth: '80%',
+      imgWidth: '75%',
       gradientColorFrom: '#103469',
       gradientColorTo: '#1F67CF',
-      imgPlaceClassName: 'justify-start',
     },
   ],
   [
