@@ -18,34 +18,51 @@ const isCasePage = Astro.url.pathname.includes('/case-');
     isCasePage && 'hidden'
   )}
 >
-  <div>
-    <nav class="max-mobile:hidden flex gap-3">
-      <NavigationLinks />
-    </nav>
+  <nav class="max-mobile:hidden flex gap-3">
+    <NavigationLinks />
+  </nav>
 
-    <div class="max-mobile:mt-13 mt-32">
-      <Image
-        src={elizabethPhoto}
-        alt="Елизавета Орлова"
-        class="h-30 w-30 object-contain"
-      />
-      <div class="mt-6 flex flex-col gap-3">
-        <div class="flex gap-2">
-          <h4>Елизавета Орлова</h4>
-          <h4 class="text-brand-gray2">[Москва]</h4>
-        </div>
-        <h1 class="text-brand-blue">UX/UI-дизайнер</h1>
-        <p class="text-default max-w-82">
-          Успешно закрываю задачи, когда нужно взять на себя полный цикл
-          коммуникации со стейкхолдерами: от интервью до утверждения финальных
-          макетов.
+  <div>
+    <Image
+      src={elizabethPhoto}
+      alt="Елизавета Орлова"
+      class="h-30 w-30 object-contain"
+    />
+    <div class="mt-5 flex flex-col gap-3">
+      <div class="flex gap-2">
+        <h4>Елизавета Орлова</h4>
+        <h4 class="text-brand-gray2">[Москва]</h4>
+      </div>
+      <h1 class="text-brand-blue">UX/UI-дизайнер</h1>
+      <div class="max-w-82">
+        <p class="text-default mb-3">
+          Имею опыт более двух лет в дизайне интерфейсов. Улучшила
+          пользовательский опыт личного кабинета для пациентов
+          НИИР им. В.А. Насоновой.
         </p>
-        <p class="text-default text-brand-blue">[Работала с госучреждениями]</p>
+        <p class="text-default mb-3">
+          До этого больше года создавала для них диджитал дизайн, провела
+          редизайн сайта с нуля.
+        </p>
+        <p class="text-default mb-3">
+          Мои решения помогли снизить количество обращений в техническую
+          поддержку.
+        </p>
+      </div>
+      <div>
+        <a
+          class="btn-brand bg-brand-blue text-white"
+          href="/Resume_OrlovaES_UXUI-designer.pdf"
+          target="_blank"
+          rel="noopener noreferrer">резюме (pdf)</a
+        >
       </div>
     </div>
   </div>
 
-  <div class="max-mobile:hidden flex flex-col gap-2">
-    <ContactMe />
+  <div>
+    <div class="max-mobile:hidden flex flex-col gap-2">
+      <ContactMe />
+    </div>
   </div>
 </header>

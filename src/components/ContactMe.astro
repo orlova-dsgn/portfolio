@@ -1,4 +1,12 @@
-<p class="text-default">Свяжитесь со мной</p>
+---
+interface Props {
+  withLabel?: boolean;
+}
+
+const { withLabel } = Astro.props;
+---
+
+{withLabel && <p class="text-default">Свяжитесь со мной</p>}
 <div class="flex gap-3">
   <a
     class="btn-brand"
