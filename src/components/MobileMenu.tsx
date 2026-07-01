@@ -1,10 +1,12 @@
 import { useState, useEffect, type ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface MobileMenuProps {
   children: ReactNode;
+  className?: string;
 }
 
-export const MobileMenu = ({ children }: MobileMenuProps) => {
+export const MobileMenu = ({ children, className }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleIsOpen = () => {
@@ -24,7 +26,7 @@ export const MobileMenu = ({ children }: MobileMenuProps) => {
 
   return (
     <>
-      <div className="fixed top-4 right-4 z-50">
+      <div className={cn('fixed top-4 right-4 z-50', className)}>
         <button
           className="btn-brand flex h-10 w-10 items-center justify-center"
           onClick={toggleIsOpen}
@@ -61,7 +63,26 @@ export const MobileMenu = ({ children }: MobileMenuProps) => {
         </button>
       </div>
 
-      {isOpen && <>{children}</>}
+      <div
+        className={cn(
+          'fixed inset-0 z-40 bg-black/40 transition-opacity duration-300',
+          isOpen
+            ? 'pointer-events-auto opacity-100'
+            : 'pointer-events-none opacity-0'
+        )}
+        onClick={toggleIsOpen}
+      />
+
+      <div
+        className={cn(
+          'max-mobile:max-w-240 max-mobile:px-6 fixed top-0 right-0 bottom-0 z-45 w-full max-w-90 bg-white px-15 py-6 shadow-xl',
+          'flex flex-col justify-between',
+          'transform transition-transform duration-300 ease-in-out',
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        )}
+      >
+        {children}
+      </div>
     </>
   );
 };

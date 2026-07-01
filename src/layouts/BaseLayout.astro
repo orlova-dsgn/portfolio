@@ -16,7 +16,7 @@ const isCasePage = Astro.url.pathname.includes('/case-');
 const isProd = import.meta.env.PROD;
 ---
 
-<html lang="ru" class="scrollbar-gutter-stable">
+<html lang="ru" class="max-mobile:scrollbar-gutter-stable">
   <head>
     <Font cssVariable="--font-inter" preload />
     <meta charset="utf-8" />
@@ -54,16 +54,16 @@ const isProd = import.meta.env.PROD;
         "bg-[url('/pattern.svg')] bg-position-[16px_15px] bg-repeat"
     )}
   >
-    <div class="max-mobile:block hidden">
-      <MobileMenu client:media="(max-width: 960px)">
-        <div class="fixed inset-0 flex flex-col justify-between bg-white p-4">
-          <div></div>
-          <nav class="flex flex-col gap-6">
-            <NavigationLinks />
-          </nav>
-          <div class="flex flex-col gap-2">
-            <ContactMe withLabel />
-          </div>
+    <div class={cn(isCasePage ? 'block' : 'max-mobile:block hidden')}>
+      <MobileMenu client:load className="mobile:right-15">
+        <div></div>
+
+        <nav class="flex flex-col gap-6">
+          <NavigationLinks />
+        </nav>
+
+        <div class="flex flex-col gap-2">
+          <ContactMe withLabel />
         </div>
       </MobileMenu>
     </div>
