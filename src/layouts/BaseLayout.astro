@@ -1,6 +1,12 @@
 ---
 import { Font } from 'astro:assets';
+import { Image } from 'astro:assets';
+
 // import { ClientRouter } from 'astro:transitions';
+
+import { cn } from '@/lib/utils';
+
+import elizabethPhoto from '@/assets/elizabeth.png';
 
 import Header from '@/components/Header.astro';
 import ContactMe from '@/components/ContactMe.astro';
@@ -9,7 +15,6 @@ import YandexMetrika from '@/components/YandexMetrika.astro';
 import { MobileMenu } from '@/components/MobileMenu';
 
 import '@/styles/global.css';
-import { cn } from '@/lib/utils';
 
 const isCasePage = Astro.url.pathname.includes('/case-');
 
@@ -66,6 +71,21 @@ const isProd = import.meta.env.PROD;
           <ContactMe withLabel />
         </div>
       </MobileMenu>
+    </div>
+
+    <div class={cn('hidden', isCasePage && 'mobile:block')}>
+      <div class="fixed top-4 left-12 z-50">
+        <a class="flex cursor-pointer gap-1" href="/">
+          <Image
+            src={elizabethPhoto}
+            alt="Елизавета Орлова"
+            class="h-10 w-10 object-contain"
+          />
+          <button class="btn-brand pointer-events-none h-10"
+            >Елизавета Орлова</button
+          >
+        </a>
+      </div>
     </div>
 
     <Header />
