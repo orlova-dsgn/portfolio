@@ -1,9 +1,14 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 
 import { PROJECT_LIST } from '@/constants';
+
+import concept_1 from '@/assets/concepts/Concept_1.png';
+import concept_2 from '@/assets/concepts/Concept_2.png';
+import concept_3 from '@/assets/concepts/Concept_3.png';
 ---
 
 <BaseLayout>
@@ -20,6 +25,20 @@ import { PROJECT_LIST } from '@/constants';
             </div>
           ))
         }
+      </section>
+
+      <section>
+        <Image
+          src={concept_1}
+          alt="Концепт"
+          class="max-mobile:my-6 my-12 w-full object-contain"
+        />
+        <div
+          class="max-mobile:grid-cols-1 max-mobile:gap-6 grid grid-cols-2 gap-12"
+        >
+          <Image src={concept_2} alt="Концепт" class="w-full object-contain" />
+          <Image src={concept_3} alt="Концепт" class="w-full object-contain" />
+        </div>
       </section>
 
       <h3 class="mt-6">

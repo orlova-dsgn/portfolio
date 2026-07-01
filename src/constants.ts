@@ -66,17 +66,17 @@ export const PROJECT_LIST: Project[][] = [
     },
   ],
   [
-    {
-      id: 'case-3',
-      title: 'Линквэй',
-      subtitle: 'корпоративный сайт',
-      description:
-        'Корпоративный сайт для дистрибьютора информационных технологий, выстроенный как удобная B2B-платформа для взаимодействия с вендорами и партнёрами',
-      image1: imgLinkway,
-      imgWidth: '75%',
-      gradientColorFrom: '#F95B3D',
-      gradientColorTo: '#01369D',
-    },
+    // {
+    //   id: 'case-3',
+    //   title: 'Линквэй',
+    //   subtitle: 'корпоративный сайт',
+    //   description:
+    //     'Корпоративный сайт для дистрибьютора информационных технологий, выстроенный как удобная B2B-платформа для взаимодействия с вендорами и партнёрами',
+    //   image1: imgLinkway,
+    //   imgWidth: '75%',
+    //   gradientColorFrom: '#F95B3D',
+    //   gradientColorTo: '#01369D',
+    // },
     {
       id: 'case-4',
       title: 'Керамика',
