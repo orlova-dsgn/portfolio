@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   subtitle?: string;
   description: string;
+  descriptionClassName?: string;
   points?: string[];
   image1: ImageMetadata;
   imgWidth: string;
@@ -10,4 +11,5 @@ export interface Project {
   gradientColorTo: string;
   externalLink?: string;
   imgPlaceClassName?: string;
+  disabled?: boolean;
 }

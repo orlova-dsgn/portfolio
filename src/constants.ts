@@ -1,31 +1,13 @@
 import imgNiir from '@/assets/projects/img_niir.png';
 import imgInrik from '@/assets/projects/img_Inrik-vist.png';
-import imgLinkway from '@/assets/projects/img_linkway.png';
+// import imgLinkway from '@/assets/projects/img_linkway.png';
 import imgKeramika from '@/assets/projects/img_keramika.png';
 import imgLk from '@/assets/projects/img_lk.png';
+import imgInrikLk from '@/assets/projects/img_Inrik_lk.png';
 
 import type { Project } from './types';
 
 export const PROJECT_LIST: Project[][] = [
-  [
-    {
-      id: 'case-1',
-      title: 'Институт ревматологии',
-      description:
-        'Редизайн корпоративного сайта медицинской организации, позиционирующей себя как лучшую в области ревматологии',
-      points: [
-        'Разработала UX/UI дизайн многостраничного сайта, переработала структуру',
-        'Сократила путь пользователя до получения необходимых инструкций и разобрала «информационную свалку»',
-        'Сопровождала реализацию проекта: взаимодействовала с разработчиками и стейкхолдерами',
-        'Занималась вёрсткой страниц сайта (на этапе поддержки)',
-        'Разработала айдентику для телеграм-канала учреждения и провела UX-аудит бота в телеграм',
-      ],
-      image1: imgNiir,
-      imgWidth: '75%',
-      gradientColorFrom: '#103469',
-      gradientColorTo: '#1F67CF',
-    },
-  ],
   [
     {
       id: 'case-5',
@@ -41,6 +23,38 @@ export const PROJECT_LIST: Project[][] = [
         'Собраны макеты для web с использованием дизайн-системы',
       ],
       image1: imgLk,
+      imgWidth: '75%',
+      gradientColorFrom: '#103469',
+      gradientColorTo: '#1F67CF',
+    },
+  ],
+  [
+    {
+      id: 'case-6',
+      title: 'Личный кабинет для интернет-магазина',
+      description: 'Скоро здесь будет кейс',
+      descriptionClassName: 'text-brand-gray3',
+      image1: imgInrikLk,
+      imgWidth: '68%',
+      gradientColorFrom: '#064219',
+      gradientColorTo: '#28653C',
+      disabled: true,
+    },
+  ],
+  [
+    {
+      id: 'case-1',
+      title: 'Институт ревматологии',
+      description:
+        'Редизайн корпоративного сайта медицинской организации, позиционирующей себя как лучшую в области ревматологии',
+      points: [
+        'Разработала UX/UI дизайн многостраничного сайта, переработала структуру',
+        'Сократила путь пользователя до получения необходимых инструкций и разобрала «информационную свалку»',
+        'Сопровождала реализацию проекта: взаимодействовала с разработчиками и стейкхолдерами',
+        'Занималась вёрсткой страниц сайта (на этапе поддержки)',
+        'Разработала айдентику для телеграм-канала учреждения и провела UX-аудит бота в телеграм',
+      ],
+      image1: imgNiir,
       imgWidth: '75%',
       gradientColorFrom: '#103469',
       gradientColorTo: '#1F67CF',
